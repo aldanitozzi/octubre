@@ -97,20 +97,22 @@
         font-size: 14px; /* Ajusta el tamaño de fuente en la línea de tiempo */
     }
 }
-        /* Estilos para los controles de música */
-        .controls {
-            position: fixed; /* Mantiene los controles en la parte superior derecha */
-            top: 20px;
-            right: 20px;
-            text-align: center;
-            z-index: 1000; /* Asegura que esté por encima de otros elementos */
-        }
-        .controls p {
-            margin: 0;
-            font-size: 18px;
-            color: #333;
-            font-weight: bold;
-        }
+     
+/* Controles de Música */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los botones y el texto */
+    position: fixed; /* Mantiene los controles fijos en la parte inferior */
+    right: 20px; /* Ajusta la posición desde la derecha */
+    bottom: 20px; /* Ajusta la posición desde la parte inferior */
+    z-index: 1000; /* Asegura que los controles estén por encima del contenido */
+}
+
+.controls p {
+    margin-bottom: 5px; /* Espacio entre el texto y los botones */
+}
+
         .controls button {
             margin: 5px;
             padding: 10px 15px;
