@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1ro de Octubre ♡ </title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Georgia', serif;
+            background: #f7f0e8;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+        h1, h2 {
+            text-align: center;
+            color: #6B4226;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
+            margin: auto;
+        }
+
+        /* Estilos de la Galería */
+        .gallery-container {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .gallery-slide {
+            display: none;
+        }
+        .gallery-slide img {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+        .gallery-slide img:hover {
+            transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            user-select: none;
+            transform: translateY(-50%);
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* Estilos de la Línea de Tiempo */
+        .timeline-container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .timeline-event {
+            display: none;
+            background-color: #FFFAF0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .timeline-event.active {
+            display: block;
+        }
+        .controls p {
+    margin-bottom: 5px; /* Espacio entre el texto y los botones */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .controls {
+        right: 10px; /* Ajusta la posición en pantallas más pequeñas */
+        top: 10px; 
+    }
+
+    .gallery-slide img {
+        width: 90%; /* Reduce el ancho de las imágenes en pantallas pequeñas */
+    }
+
+    h1, h2 {
+        font-size: 20px; /* Ajusta el tamaño de los títulos para pantallas pequeñas */
+    }
+
+    .timeline-event {
+        font-size: 14px; /* Ajusta el tamaño de fuente en la línea de tiempo */
+    }
+}
+        /* Estilos para los controles de música */
+        .controls {
+            position: fixed; /* Mantiene los controles en la parte superior derecha */
+            top: 20px;
+            right: 20px;
+            text-align: center;
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        }
+        .controls p {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+        .controls button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #d6bc8d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .controls button:hover {
+            background-color: #dbca4a;
+        }
+    </style>
+</head>
+<body>
+    <h1>HOY COMIENZA OCTUBRE </h1>
+
+    <!-- Galería de Fotos -->
+    <div class="gallery-container">
+        <div class="gallery-slide">
+            <img src="imagenes/foto1.jpg" alt="Foto de ella 1" style="width: 300px;display: block; margin: auto; height: auto;">
+        </div>
+        <div class="gallery-slide">
+            <img src="imagenes/foto2.1.jpeg" alt="Foto de ella 1" style="width: 300px;display: block; margin: auto; height: auto;">
+        </div>
+        <div class="gallery-slide">
+            <img src="imagenes/foto3.jpg" alt="Foto de ella 1" style="width: 300px;display: block; margin: auto; height: auto;">
+        </div>
+        <div class="gallery-slide">
+            <img src="imagenes/foto4.jpg" alt="Foto de ella 1" style="width: 300px;display: block; margin: auto; height: auto;">
+        </div>
+        <div class="gallery-slide">
+            <img src="imagenes/foto5.jpg" alt="Foto de ella 1" style="width: 300px;display: block; margin: auto; height: auto;">
+        </div>
+        <!-- Controles de la Galería -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <!-- Línea de Tiempo Sincronizada -->
+    <div class="timeline-container">
+        <div class="timeline-event active">
+            <h2>1ro de Octubre</h2>
+            <p>No necesito una fecha en el calendario para presumirte, porque en mi corazón, todos los días son una razón para hablar de ti, pensar en ti y amarte. No hay un solo amanecer en el que no despierte agradecido por tenerte en mi vida, ni una sola noche en la que no me duerma pensando en lo afortunado que soy. Cada conversación contigo, cada sonrisa que me das, es suficiente motivo para sentirme orgulloso de ti. No es necesario que sea primero de octubre o cualquier otra fecha señalada para demostrar al mundo lo maravillosa que eres. Porque mi amor por ti no depende de los días marcados en el calendario, es algo que nace de lo cotidiano, de los pequeños detalles, de las emociones compartidas y los momentos que construimos juntos. Tú eres mi motivo de orgullo cada día, cada minuto, y siempre te llevaré conmigo, en mis palabras, en mis gestos, y sobre todo en mi corazón.</p>
+        </div>
+        <div class="timeline-event">
+            <h2>1ro de Octubre</h2>
+            <p>Cada día contigo es como un nuevo capítulo en un libro que nunca quiero que termine. Desde el momento en que te conocí, supe que había encontrado a alguien verdaderamente especial. A tu lado, he aprendido lo que significa el verdadero amor, el apoyo incondicional y la alegría compartida. Cada conversación, cada risa, y cada momento de silencio compartido se convierten en recuerdos que atesoro en lo más profundo de mi corazón. Como un faro que guía a los barcos en la oscuridad, tú iluminas mi camino y me inspiras a ser la mejor versión de mí mismo. Agradezco cada instante que compartimos, y espero con ansias las aventuras que aún nos esperan. Tu presencia en mi vida es un regalo, y cada día a tu lado es una nueva oportunidad para descubrir lo maravillosa que eres. Estoy emocionado por seguir escribiendo nuestra historia juntos, un capítulo a la vez</p>
+        </div>
+        <div class="timeline-event">
+            <h2>1ro de Octubre</h2>
+            <p>Eres el aire que respiro, la razón por la que me despierto cada mañana con una sonrisa en el rostro. Sin ti, mis días serían grises y vacíos, como un lienzo sin color. Tu amor es como un abrigo cálido en un día frío, siempre reconfortante y siempre presente, envolviéndome en una sensación de seguridad y paz que solo tú puedes darme. Cada abrazo tuyo es como un refugio, donde encuentro consuelo y fuerza. No hay duda de que has llenado mi vida de alegría y amor; cada momento contigo es un regalo que atesoro. Estoy eternamente agradecido por cada instante que compartimos, desde las risas hasta las charlas profundas, y cada pequeño gesto que ilumina mi día. Tú eres mi razón, mi inspiración y mi felicidad, y no hay nada que desee más que seguir construyendo recuerdos contigo.</p>
+        </div>
+        <div class="timeline-event">
+            <h2>1ro de Octubre</h2>
+            <p>Las olas del mar nunca se detienen, y así es mi amor por ti: eterno, incesante, y cada día más fuerte. No importa si es un día cualquiera o una fecha especial, mi amor por ti no necesita de un motivo para crecer, simplemente lo hace. Como las olas que tocan la orilla, una tras otra, mi corazón late por ti sin detenerse, trayendo consigo el recuerdo de cada momento vivido, de cada risa compartida, de cada abrazo que anhelo darte. Cada día contigo es un regalo, y aunque no siempre haya un festejo o una ocasión que lo marque, el simple hecho de tenerte a mi lado hace que cualquier día sea digno de celebrarse. No hay un momento en el que no sienta que te tengo presente en mi vida, en mi mente y en mi alma. Así como el mar no necesita un evento para seguir su curso, yo no necesito una fecha para mostrarte, una y otra vez, lo profundamente que te amo y lo feliz que soy de compartir mi vida contigo</p>
+        </div>
+        <div class="timeline-event">
+            <h2>1ro de Octubre</h2>
+            <p>No necesito un dia en el calendario  para recordarte lo esencial que eres en mi vida. Cada día contigo es un regalo, y mi amor por ti florece en cada instante. Gracias por ser tú, mi razón de sonreír y mi motivo de felicidad, con mucho cariño Miguel.....</p>
+        </div>
+    </div>
+
+
+    <!-- Elemento de audio -->
+    <audio id="miMusica" src="imagenes/musica.mp3" loop></audio>
+
+    <!-- Controles de música -->
+    <div class="controls">
+        <p>DALE PLAY<p>
+        <button id="playBtn">PLAY</button>
+        <button id="pauseBtn">PAUSE</button>
+    </div>
+
+    <script>
+        const musica = document.getElementById("miMusica");
+        const playBtn = document.getElementById("playBtn");
+        const pauseBtn = document.getElementById("pauseBtn");
+
+        playBtn.addEventListener("click", () => {
+            musica.play();
+        });
+
+        pauseBtn.addEventListener("click", () => {
+            musica.pause();
+        });
+    </script>
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.querySelectorAll('.gallery-slide');
+            let events = document.querySelectorAll('.timeline-event');
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+
+            // Oculta todas las imágenes y eventos
+            slides.forEach(slide => slide.style.display = 'none');
+            events.forEach(event => event.classList.remove('active'));
+
+            // Muestra la imagen y evento correspondiente al índice actual
+            slides[slideIndex].style.display = 'block';
+            events[slideIndex].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
